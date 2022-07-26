@@ -8,12 +8,17 @@
   .card {
     border-radius: theme("borderRadius.lg");
     overflow: hidden;
+    max-width: theme("maxWidth.sm");
   }
 
   .card__copy {
     --flow-space: 1rem;
     line-height: theme("lineHeight.relaxed");
     color: theme("colors.main-p");
+  }
+
+  .card__figure {
+    object-fit: cover;
   }
 
   .stat {
@@ -35,7 +40,7 @@
     font-size: theme("fontSize.sm");
   }
 
-  @media (min-width: theme("screens.md")) {
+  @media (min-width: theme("screens.xl")) {
     .card {
       max-width: 69rem;
       display: grid;

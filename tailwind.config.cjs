@@ -18,9 +18,6 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
         lexend: ["Lexend Deca", "sans-serif"],
       },
-      screens: {
-        md: "700px",
-      },
     },
   },
   plugins: [],
