@@ -9,7 +9,7 @@ module.exports = {
         accent: "hsl(277, 64%, 61%)",
         "n-white": "hsl(0, 0%, 100%)",
         "main-p": "hsla(0, 0%, 100%, 0.75)",
-        "stat-heading": "hsla(0, 0%, 100%, 0.6)",
+        "stats-heading": "hsla(0, 0%, 100%, 0.6)",
       },
       fontSize: {
         body: "15px",
@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         lexend: ["Lexend Deca", "sans-serif"],
+      },
+      screens: {
+        md: "700px",
       },
     },
   },

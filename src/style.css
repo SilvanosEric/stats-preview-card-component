@@ -3,3 +3,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card {
+    border-radius: theme("borderRadius.lg");
+    overflow: hidden;
+  }
+
+  .card__copy {
+    --flow-space: 1rem;
+    line-height: theme("lineHeight.relaxed");
+    color: theme("colors.main-p");
+  }
+
+  .stat {
+    --flow-space: 1.5rem;
+  }
+
+  .stat__number {
+    display: block;
+    font-size: theme("fontSize.2xl");
+    font-weight: bold;
+    color: theme("colors.n-white");
+  }
+
+  .stat__heading {
+    display: block;
+    color: theme("colors.stats-heading");
+    text-transform: uppercase;
+    font-family: theme("fontFamily.lexend");
+    font-size: theme("fontSize.sm");
+  }
+
+  @media (min-width: theme("screens.md")) {
+    .card {
+      max-width: 69rem;
+      display: grid;
+      grid-template-columns: 51% calc(100% - 49%);
+      grid-template-areas: "body img";
+    }
+
+    .card__figure {
+      grid-area: img;
+    }
+
+    .card__copy {
+      --flow-space: 1.7rem;
+    }
+
+    .stats {
+      display: flex;
+      gap: theme("gap.16");
+      --flow-space: 2.75rem;
+    }
+  }
+}
+
+@layer utilities {
+  .flow > * {
+    margin-top: var(--flow-space, 2.5rem);
+  }
+}

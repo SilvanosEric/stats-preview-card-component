@@ -11,32 +11,51 @@
     <title>Stats Preview Card Component</title>
     <script type="module" defer src="main.js"></script>
   </head>
-  <body class="text-body">
-    <main>
-      <div class="card">
-        <div class="card__figure">
-          <img src="" alt="" class="card__img" />
+
+  <body class="text-body font-inter">
+    <main class="min-h-screen grid place-items-center bg-main-bg p-6">
+      <div class="card | bg-card-bg text-center pb-8 md:text-start md:pb-0">
+        <div class="card__figure | relative">
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="images/image-header-mobile.jpg"
+            />
+            <img
+              src="images/image-header-desktop.jpg"
+              alt=""
+              class="card__img"
+            />
+          </picture>
+          <div
+            class="overlay | absolute inset-0 bg-accent mix-blend-multiply"
+          ></div>
         </div>
 
-        <div class="card__body">
-          <h1 class="card__title">
-            Get <span>insights</span> that help your business grow.
+        <div class="card__body | flow | px-8 md:px-[4.5rem] md:pt-8 md:pr-28">
+          <h1
+            class="card__title | text-n-white text-[1.75rem] leading-8 font-inter font-bold md:text-4xl md:leading-[2.7rem]"
+          >
+            Get <span class="text-accent">insights</span> that help your
+            business grow.
           </h1>
           <p class="card__copy">
             Discover the benefits of data analytics and make better decisions
             regarding revenue, customer experience, and overall efficiency.
           </p>
-          <div class="stats">
-            <span class="stats__heading">10k+</span>
-            <span class="stats__copy">Companies</span>
-          </div>
-          <div class="stats">
-            <span class="stats__heading">314</span>
-            <span class="stats__copy">Templates</span>
-          </div>
-          <div class="stats">
-            <span class="stats__heading">12M+</span>
-            <span class="stats__copy">Queries</span>
+          <div class="stats | flow">
+            <div class="stat">
+              <span class="stat__number">10k+</span>
+              <span class="stat__heading">Companies</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">314</span>
+              <span class="stat__heading">Templates</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">12M+</span>
+              <span class="stat__heading">Queries</span>
+            </div>
           </div>
         </div>
       </div>
