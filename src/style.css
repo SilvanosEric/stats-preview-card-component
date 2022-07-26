@@ -54,6 +54,7 @@
 
     .card__copy {
       --flow-space: 1.7rem;
+      padding-right: theme("padding.12");
     }
 
     .stats {
